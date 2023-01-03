@@ -1,0 +1,13 @@
+{
+  "print": "Print",
+  "subTasksOutput": "Sub-Tasks outputs",
+  "subTasksPriority": "Sub-Tasks priorities",
+  "before": "Before Due Date",
+  "on": "On Due Date",
+  "after": "After Due Date",
+  "notYetStarted": "New",
+  "current": "Current",
+  "pastDue": "Past Due",
+  "finished": "Finished",
+  "archived": "Archived"
+}

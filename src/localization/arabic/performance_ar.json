@@ -1,0 +1,13 @@
+{
+  "print": "طباعة",
+  "subTasksOutput": "مخرجات المهام الفرعية",
+  "subTasksPriority": "أولويات المهام الفرعية",
+  "before": "قبل الموعد",
+  "on": "في الموعد",
+  "after": "بعد الموعد",
+  "notYetStarted": "جديدة",
+  "current": "قيد التنفيذ",
+  "pastDue": "متأخرة",
+  "finished": "مكتملة",
+  "archived": "مؤرشفة"
+}

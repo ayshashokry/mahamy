@@ -1,0 +1,59 @@
+.sideBarMenuContainer {
+    position: fixed;
+    height: 100%;
+}
+
+.userMenu {
+    width: 100%;
+    text-align: center;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+nav.sidebar :global(.navbar-brand) :global(.glyphicon) {
+    margin-right: 0px;
+}
+
+
+
+nav.sidebar {
+    -webkit-transition: margin 200ms ease-out;
+    -moz-transition: margin 200ms ease-out;
+    -o-transition: margin 200ms ease-out;
+    transition: margin 200ms ease-out;
+}
+
+/* .....NavBar: Icon only with coloring/layout.....*/
+
+/*small/medium side display*/
+
+
+/* .....NavBar: Fully showing nav bar..... */
+@media (min-width : 1330px) {
+
+    /*Show all nav*/
+    nav.sidebar {
+        margin-left: 0px;
+        float: left;
+    }
+
+    /*Show hidden items on nav*/
+    nav.sidebar :global(.forAnimate) {
+        opacity: 1;
+    }
+}
+
+nav.sidebar :global(.navbar-nav) :global(.open) :global(.dropdown-menu)>li>a:hover,
+nav.sidebar :global(.navbar-nav) :global(.open) :global(.dropdown-menu)>li>a:focus {
+    color: #CCC;
+    background-color: transparent;
+}
+
+nav:hover :global(.forAnimate) {
+    opacity: 1;
+}
+
+section {
+    padding-left: 15px
+}

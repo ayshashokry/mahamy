@@ -1,0 +1,2368 @@
+/* * {
+  word-break: break-word;
+} */
+@font-face {
+  font-family: doridArabicKufi;
+  src: url(assets/fonts/Droid.Arabic.Kufi_.ttf);
+}
+
+@font-face {
+  font-family: TheSans;
+  src: url(assets/fonts/TheSans-Bold.otf);
+}
+
+@font-face {
+  font-family: sourcesans;
+  src: url(assets/fonts/SourceSansPro-Bold.ttf);
+}
+
+@font-face {
+  font-family: Nunito;
+  src: url(assets/fonts/Nunito-Regular.ttf);
+}
+
+.App,
+body,
+html {
+  height: 100vh !important;
+  overflow-x: hidden;
+}
+
+.menulink {
+  color: #717185;
+}
+
+.menulink svg {
+  fill: #abafbe;
+}
+
+.sidemenu-active svg {
+  fill: #025358 !important;
+}
+
+.apppage {
+  display: flex;
+  flex-direction: row;
+}
+
+.pagescroll {
+  flex: 80% !important;
+  min-width: 0px;
+}
+
+.appSidemenu {
+  flex: 20% !important;
+}
+
+/*NavBar*/
+
+.mahamy-navbar {
+  box-shadow: 0 1px 0 0 #e7e9f1;
+  background-color: #ffffff;
+}
+
+.btn-success,
+.btn-success:hover,
+.btn-success:focus {
+  height: 50px;
+  width: 50px;
+  background-color: transparent !important;
+  border: none !important;
+  color: #83899f !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.dropdown-toggle::after {
+  display: none;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+.dropdown-toggle {
+  line-height: 0 !important;
+}
+
+.dropdown-toggle span {
+  padding: 3px;
+  border-radius: 4px;
+  border: solid 1px #e7e9f1;
+  background-color: #025358;
+  font-family: doridArabicKufi;
+  font-size: 14px;
+  color: #e7e9f1;
+}
+
+.dropdownlink {
+  margin: auto;
+  height: 40px;
+}
+
+.dropdownsignoutlink a {
+  color: #1b1c20;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  color: #1b1c20;
+  text-decoration: none;
+  background-color: white !important;
+}
+
+.mahamy-navbar h3 {
+  font-family: doridArabicKufi;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: right;
+  color: #1b1c20;
+  height: 10px;
+  transition: 0.5s;
+}
+
+.navbar-nav .nav-link {
+  font-family: doridArabicKufi;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.mahamy-navbar .nav-link {
+  color: #025358 !important;
+}
+
+.mahamy-navbar .nav-username {
+  margin: auto 10px !important;
+  height: 19px;
+  font-family: doridArabicKufi;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.36;
+  color: #20252e;
+}
+
+/*SideMenu*/
+.sidelinkParent a {
+  display: block;
+  width: 100%;
+  padding-top: 2%;
+  height: 50px;
+  font-size: 15px;
+  color: #abafbe;
+  text-align: right;
+  text-decoration: none !important;
+  font-family: doridArabicKufi;
+  font-weight: bold;
+}
+
+.sidemenu {
+  height: 100vh !important;
+  margin: 0 0 0 30px;
+  padding: 30px 0 15px;
+  box-shadow: -4px 0 8px 0 #e7e9f1;
+  background-color: #ffffff;
+}
+
+/*Tree*/
+.treeExpand {
+  font-size: 25px !important;
+  color: #abafbe !important;
+}
+
+/* .MuiTreeItem-root:focus > .MuiTreeItem-content .MuiTreeItem-label {
+  z-index: 50;
+} */
+
+.MuiTreeItem-root.Mui-selected > .MuiTreeItem-content .MuiTreeItem-label,
+.MuiTreeItem-root.Mui-selected
+  > .MuiTreeItem-content
+  .MuiTreeItem-label
+  .MuiLabelLink {
+  background-color: #176d73 !important;
+  color: #fff !important;
+}
+
+.MuiTreeItem-content {
+  margin-top: 10px;
+}
+
+.MuiTreeItem-label {
+  margin-right: 11px !important;
+  padding-right: 15px;
+  text-align: right;
+}
+
+.MuiTypography-body1 {
+  font-family: doridArabicKufi !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.calendarTree {
+  color: #011354 !important;
+  margin-left: 15px !important;
+}
+
+.addTreeIcon {
+  position: absolute;
+  left: 5px;
+  margin-top: -30px !important;
+  color: #83899f;
+}
+
+.treeTable .btn-success,
+.tasksTree .btn-success {
+  height: auto;
+}
+
+.addTreeIcon i {
+  position: absolute;
+}
+
+.tasksTree {
+  padding-top: 2% !important;
+}
+
+.modal-content {
+  width: 70% !important;
+  margin: auto;
+  /* z-index: 99999999 !important; */
+}
+
+#snackbar {
+  width: 500px;
+  background-color: #176d73;
+  padding: 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  /* bottom: 10% !important; */
+  z-index: 500;
+  text-align: center;
+}
+
+.deleteTaskModal button {
+  padding: 10px 25px;
+  border-radius: 4px;
+  background-color: #025358 !important;
+  text-align: center;
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.tasksTree .dropdown-menu {
+  text-align: center !important;
+}
+
+.tasksTree h2 {
+  text-align: right;
+  font-family: doridArabicKufi;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.35;
+  color: #1b1c20;
+  padding-bottom: 2%;
+}
+
+.tasksTree .ant-tree-rtl .ant-tree-switcher_close .ant-tree-switcher-icon svg {
+  color: #d4d6de;
+  width: 20px;
+  height: 12px;
+}
+
+.ant-tree .ant-tree-node-content-wrapper .ant-tree-node-selected {
+  background-color: #e7e9f1 !important;
+}
+
+.tasksTree .ant-tree-switcher .ant-tree-switcher-icon svg {
+  color: #abafbe;
+  width: 20px;
+  height: 12px;
+}
+
+.tasksTree .ant-tree-title {
+  /* margin: 2px 12px 1px 0 !important; */
+  font-family: doridArabicKufi;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.31;
+  text-align: right;
+  color: #364464;
+}
+
+/*TaskManagement*/
+
+.TaskManagementPage {
+  margin-top: 15px;
+  border: solid 1px #e7e9f1;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.TaskSchedulePage {
+  margin-top: 15px;
+  background-color: #fbfcfe;
+  border-radius: 10px;
+}
+
+.performanceIndicatorsPage {
+  margin-top: 30px;
+  background-color: #fbfcfe;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+  height: 5px !important;
+  /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+  /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #025358;
+  /* color of the scroll thumb */
+  border-radius: 5px;
+  /* roundness of the scroll thumb */
+  border: 1px solid transparent;
+  /* creates padding around scroll thumb */
+}
+
+.noTasksdiv h5 {
+  font-family: doridArabicKufi;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.31;
+  text-align: center;
+  color: #20252e;
+}
+
+.NotaskImg {
+  text-align: center !important;
+  padding-top: 7%;
+}
+
+.addMainTaskBtn,
+.addMainTaskBtn:hover,
+.addMainTaskBtn:focus,
+.addMainTaskBtn:active,
+.addSubTaskBtn {
+  margin: 31px 14px 26.9px 0px;
+  padding: 10px 25px;
+  border-radius: 4px;
+  background-color: #025358 !important;
+  text-align: center;
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.addSubTaskBtn,
+.addSubTaskBtn:hover,
+.addSubTaskBtn:focus,
+.addSubTaskBtn:active {
+  border: solid 1px !important;
+  border-color: #025358;
+  background-color: #fff !important;
+  color: #025358 !important;
+}
+
+.searchShowBtn,
+.searchShowBtn:focus,
+.searchShowBtn:active,
+.searchShowBtn:hover {
+  margin: 31px 0 26.9px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: solid 1px #83899f !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+  font-family: doridArabicKufi;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.31;
+  text-align: center;
+  color: #5c6581 !important;
+}
+
+.taskSearchInput input,
+.searchForm input {
+  margin: 31px 0 26.9px;
+  padding: 12px 40px 12px 0;
+  border-radius: 4px;
+  border: solid 1px #d4d6de;
+  background-color: #ffffff;
+}
+
+.taskSearchInput input::placeholder,
+.searchForm input::placeholder {
+  font-family: doridArabicKufi;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  color: #d4d6de;
+}
+
+.searchIconBtn,
+.searchIconBtn:focus,
+.searchIconBtn:active,
+.searchIconBtn,
+.searchIconBtn:focus,
+.searchIconBtn:active {
+  background-color: transparent !important;
+  color: #d4d6de !important;
+  box-shadow: none !important;
+  border: none !important;
+  right: 10px;
+  position: absolute;
+  top: 35px;
+}
+
+/*AddTaskModal*/
+.modal-header .close {
+  margin: 0 !important;
+}
+
+.modal-header {
+  display: block !important;
+  padding: 2px !important;
+}
+
+.modal-title h5 {
+  margin: 10px 12px;
+  font-family: doridArabicKufi;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: right;
+  color: #20252e;
+}
+
+.modal-title .circle {
+  color: #025358;
+  margin-left: 15px;
+  /* padding: 10px; */
+  background-color: #f0f3f4;
+  border-radius: 50%;
+}
+
+/*AddTaskForm*/
+.ant-upload {
+  width: 100% !important;
+  padding: 12px !important;
+  height: 80px !important;
+  cursor: pointer;
+}
+
+.ant-uploaded,
+.ant-uploaded:hover,
+.ant-uploaded:focus,
+.ant-uploaded:active {
+  text-align: center !important;
+  border-radius: 5px !important;
+  outline: none !important;
+  border: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='13' ry='13' stroke='%23025358FF' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='22' stroke-linecap='square'/%3e%3c/svg%3e") !important;
+  border-radius: 13px !important;
+  font-family: Nunito !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  padding: 10px !important;
+  color: #025358 !important;
+}
+
+.ant-uploaded .MuiSvgIcon-root {
+  font-size: 50px !important;
+  margin-left: 30px;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner,
+.ant-checkbox-checked .ant-checkbox-inner:hover {
+  background-color: white !important;
+  border: solid 2px #025358 !important;
+}
+.ant-select-tree-checkbox-checked .ant-select-tree-checkbox-inner {
+  border-color: #025358 !important;
+  background-color: #025358 !important ;
+}
+.ant-select-tree-checkbox-indeterminate .ant-select-tree-checkbox-inner::after {
+  background-color: #025358 !important;
+}
+.addManiTaskForm label,
+.addMainTaskBtn .manageName {
+  font-family: doridArabicKufi;
+  font-size: 14px;
+  font-weight: bold;
+  color: #5c6581 !important;
+}
+
+.addManiTaskForm label::before {
+  color: #025358 !important;
+}
+
+.addManiTaskForm input {
+  padding: 10px 20px !important;
+  border-radius: 4px;
+  border: solid 1px #d4d6de;
+  background-color: #fbfcfe;
+}
+
+.ant-select-selector {
+  border-radius: 4px !important;
+  padding: 20px;
+  border: solid 1px #d4d6de !important;
+  background-color: #fbfcfe !important;
+}
+
+.addManiTaskForm .tableSpan {
+  text-align: right !important;
+  font-family: doridArabicKufi;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.33;
+  color: #d2d1dc !important;
+}
+
+.addManiTaskForm .table {
+  margin-bottom: 10px !important;
+}
+
+.input-div {
+  padding-bottom: 15px !important;
+}
+
+.ant-checkbox:focus,
+.ant-checkbox:hover {
+  border-color: #025358 !important;
+}
+
+.ant-checkbox-inner {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.ant-checkbox-wrapper:hover .ant-checkbox-inner,
+.ant-checkbox:hover .ant-checkbox-inner,
+.ant-checkbox-input:focus + .ant-checkbox-inner,
+.ant-checkbox-input + .ant-checkbox-inner,
+.ant-checkbox-checked .ant-checkbox-inner::after {
+  border-color: #025358 !important;
+}
+
+.ant-form-item-explain {
+  text-align: right !important;
+}
+
+.addbtn {
+  border-radius: 4px;
+  padding: 7px 15px !important;
+  border: none !important;
+  background-color: #025358 !important;
+  font-family: doridArabicKufi;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: none !important;
+  outline: none !important;
+  color: #fffefb !important;
+}
+
+.cancelbtn {
+  padding: 5px 15px !important;
+  border-radius: 4px;
+  border: 2px solid #025358 !important;
+  color: #025358 !important;
+  font-family: doridArabicKufi;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: none !important;
+  outline: none !important;
+  text-align: center;
+  background-color: #fffefb !important;
+}
+
+.addManiTaskForm label::after {
+  display: none !important;
+}
+
+/*Tables*/
+
+.selectedTasksTable tbody td {
+  font-family: doridArabicKufi;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.36;
+  color: #0b2548;
+  padding-top: 20px;
+  padding-bottom: 20px !important;
+}
+
+.selectedGroupsTable th,
+.selectedTasksTable th,
+.selectedGroupsTable td,
+.selectedTasksTable td {
+  text-align: right !important;
+  border-bottom: none !important;
+  border-top: none !important;
+  padding-bottom: 1px !important;
+}
+
+.selectedGroupsTable thead tr,
+.selectedTasksTable thead tr {
+  background-color: #f0f3f4 !important;
+  border: 1px solid #f0f3f4 !important;
+  border-radius: 20px !important;
+  font-family: doridArabicKufi;
+  font-size: 14px;
+  font-weight: bold;
+  color: #83899f;
+}
+
+.selectedGroupsTable .deleteBtn,
+.selectedGroupsTable .deleteBtn:active {
+  color: #364464 !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/*Media Query */
+
+@media (min-width: 1199px) {
+  .tableFixHead th {
+    background: #eee;
+  }
+
+  .tableFixHead {
+    overflow-y: auto;
+    height: 100px;
+  }
+
+  .tableFixHead thead th {
+    position: sticky;
+    top: 0;
+  }
+
+  .table-responsive {
+    display: table;
+  }
+
+  .TaskManagementPage,
+  .TaskSchedulePage,
+  .ArchivePage,
+  .performanceIndicatorsPage {
+    height: 80vh !important;
+    text-align: center;
+    /* overflow-x: scroll !important; */
+    overflow-x: hidden;
+    padding-bottom: 5% !important;
+  }
+
+  .App,
+  body,
+  html {
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 767px) {
+  .navlogo {
+    margin-right: 30px;
+  }
+
+  .mahamy-navbar h4 {
+    font-size: 22px !important;
+    left: 30% !important;
+  }
+}
+
+@media (max-width: 1199px) {
+  .navbar-nav .nav-link {
+    margin: auto;
+    padding-right: 30px;
+    /* border-bottom: 1px solid #d8dae0; */
+  }
+
+  .sidemenu .navbar-nav {
+    margin-top: 35px;
+  }
+
+  .modal-content {
+    width: 100% !important;
+  }
+
+  .apppage {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .TaskManagementPage,
+  .TaskSchedulePage,
+  .HomePage,
+  .ArchivePage,
+  .performanceIndicatorsPage {
+    max-height: 100%;
+  }
+
+  .pagescroll {
+    flex: none !important;
+  }
+
+  .appSidemenu {
+    flex: 100% !important;
+  }
+
+  /* .ArchivePage {
+    overflow-x: auto !important;
+  } */
+  /* .sidemenu .navbar-nav {
+    position: sticky !important;
+  } */
+  .App {
+    position: relative;
+  }
+
+  .togChange {
+    position: fixed;
+    z-index: 9999999999 !important;
+  }
+
+  .sidemenu {
+    margin: 0px !important;
+    position: absolute;
+    top: -10px;
+    right: 60px;
+    width: 0 !important;
+    box-shadow: none;
+    background-color: #fff !important;
+  }
+
+  .sidemenu .navbar-toggler {
+    z-index: 999999999 !important;
+    border: none;
+    margin-top: 25px;
+  }
+
+  .ant-notification-notice,
+  .modal-content {
+    margin-top: 140px !important;
+  }
+
+  .manageDetailsMobile {
+    margin-top: 20px;
+  }
+
+  .mahamy-navbar {
+    z-index: 999999;
+  }
+
+  /* .mahamy-navbar {
+    margin-left: 10%;
+  } */
+  .togDefault i,
+  .togChange i {
+    color: #025358;
+    font-size: 25px;
+  }
+
+  .sidemenu .navbar-collapse {
+    position: fixed;
+    background-color: #fff !important;
+    box-shadow: 0 2px 4px 0 #e7e9f1;
+    border: solid 1px #e7e9f1;
+    top: 0;
+    bottom: 0;
+    /* adjust to height of navbar */
+    left: 0;
+    z-index: 999999 !important;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden !important;
+    /* overflow: hidden !important; */
+  }
+
+  .sidemenu .navbar-collapse.collapsing {
+    left: -75%;
+    transition: height 0s ease;
+  }
+
+  .sidemenu .navbar-collapse.show {
+    left: 0;
+    transition: left 300ms ease-in-out;
+  }
+
+  .sidemenu .navbar-toggler.collapsed ~ .navbar-collapse {
+    transition: left 500ms ease-in-out;
+  }
+}
+
+.detBtnFloat {
+  text-align: right;
+}
+
+.commBtnFloat {
+  text-align: left !important;
+}
+
+@media (max-width: 700px) {
+  .noTasksdiv img {
+    width: 100%;
+  }
+
+  .mahamy-navbar h4 {
+    font-size: 20px !important;
+  }
+
+  .detBtnFloat {
+    text-align: center;
+    margin-top: 2px;
+  }
+
+  .commBtnFloat {
+    text-align: center !important;
+    margin-top: 2px;
+  }
+}
+
+/*Search Filters*/
+.filterSearch {
+  direction: rtl !important;
+}
+.filterSearch .ant-select-selector {
+  height: 45px !important;
+  border-radius: 4px;
+  border: solid 1px #d4d6de;
+  background-color: #ffffff;
+  font-family: doridArabicKufi;
+  font-size: 14px;
+  line-height: 1.36;
+  color: #364464 !important;
+}
+
+/*TaskCard*/
+
+.TaskCard {
+  margin: 10px;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 #e7e9f1;
+  border: solid 1px #e7e9f1;
+  background-color: #ffffff;
+}
+
+.TaskCard .maintaskname h6 {
+  font-family: doridArabicKufi;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.31;
+  text-align: right;
+  color: #364464;
+}
+
+.TaskCard .subtaskname {
+  font-family: doridArabicKufi;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.33;
+  text-align: right;
+  color: #5c6581;
+  padding-top: 10px;
+}
+.cardUserName {
+  font-family: doridArabicKufi;
+  font-size: 14px;
+  text-align: right;
+  color: #5c6581;
+}
+.cardUserName span {
+  font-weight: bold !important;
+}
+.TaskCard .employeename {
+  font-family: doridArabicKufi;
+  font-size: 12px;
+  line-height: 1.33;
+  text-align: right;
+  color: #5c6581;
+  padding-top: 10px;
+}
+
+.TaskCard .dateTitle {
+  font-size: 10px;
+  font-weight: bold;
+  font-family: doridArabicKufi;
+  line-height: 1.4;
+  text-align: right;
+  color: #5c6581;
+}
+
+.TaskCard .dateTitle i {
+  color: #025358 !important;
+  font-size: 14px !important;
+}
+
+.TaskCard .taskpriority {
+  text-align: left;
+}
+
+.TaskCard .taskpriority span {
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-family: doridArabicKufi;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.33;
+  text-align: center;
+}
+
+.TaskCard .detailsBtn,
+.TaskCard .detailsBtn:active,
+.TaskCard .detailsBtn:hover,
+.TaskDetailsModal .detailsBtn,
+.TaskDetailsModal .detailsBtn:active,
+.TaskDetailsModal .detailsBtn:hover,
+.TaskDetailsModal .detailsBtn:active {
+  border-radius: 4px;
+  padding: 7px 13px;
+  border: solid 1px #025358 !important;
+  background-color: #ffffff !important;
+  font-family: doridArabicKufi;
+  font-size: 14px;
+  box-shadow: none !important;
+  font-weight: bold;
+  line-height: 1.36;
+  text-align: center;
+  color: #025358 !important;
+}
+
+.TaskCard .commentsBtn,
+.TaskCard .commentsBtn:active,
+.TaskCard .commentsBtn:hover,
+.TaskCard .commentsBtn:active,
+.TaskDetailsModal .commentsBtn,
+.TaskDetailsModal .commentsBtn:active,
+.TaskDetailsModal .commentsBtn:hover,
+.TaskDetailsModal .commentsBtn:active {
+  border-radius: 4px;
+  padding: 7px 13px;
+  border: solid 1px #025358 !important;
+  background-color: #025358 !important;
+  font-family: doridArabicKufi;
+  font-size: 14px;
+  box-shadow: none !important;
+  font-weight: bold;
+  line-height: 1.36;
+  text-align: center;
+  color: #fffefb !important;
+  margin-top: 5px;
+}
+
+.commentsBtn span {
+  color: #fffefb !important;
+}
+
+/*Slick-Slider*/
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  font-size: 25px;
+  line-height: 1;
+  opacity: 0.75;
+  color: #5c6581 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+}
+
+.slick-next:before {
+  font-family: "slick";
+  font-size: 25px;
+  line-height: 1;
+  opacity: 0.75;
+  color: #5c6581 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  right: 15px;
+}
+
+/****Archive Page****/
+
+.react-datepicker__input-container input {
+  height: 40px;
+  width: 100% !important;
+  padding: 20px 10px;
+  border-radius: 4px;
+  border: solid 1px #d4d6de;
+  background-color: #ffffff;
+  font-family: doridArabicKufi;
+  font-size: 14px;
+  color: #364464 !important;
+  font-family: doridArabicKufi;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: right;
+  color: #364464;
+}
+
+.dateFromIcon,
+.dateToIcon {
+  bottom: 40%;
+  position: absolute;
+  right: 80%;
+}
+
+.dateIcon {
+  bottom: 40%;
+  position: absolute;
+  right: 90%;
+}
+
+.DateContainer p {
+  font-weight: bold;
+  font-family: doridArabicKufi;
+  font-size: 14px;
+  color: #364464;
+}
+
+.ant-pagination-item-active,
+.ant-pagination-item:hover,
+.ant-pagination-prev:hover .ant-pagination-item-link,
+.ant-pagination-next:hover .ant-pagination-item-link {
+  border-color: #176d73 !important;
+}
+
+.ant-pagination-item-active a,
+.ant-pagination-item a:hover,
+.ant-pagination-prev:hover .ant-pagination-item-link,
+.ant-pagination-next:hover .ant-pagination-item-link {
+  color: #176d73 !important;
+}
+
+.ArchivePage {
+  background-color: #fff !important;
+  padding: 0 24px 15px 24px;
+  border: solid 1px #e7e9f1;
+}
+
+.ArchivePage .detailsBtn,
+.ArchivePage .detailsBtn:focus,
+.ArchivePage .detailsBtn:active {
+  font-family: doridArabicKufi;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.36;
+  background-color: transparent !important;
+  color: #025358 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.rootts {
+  height: 216;
+  flex-grow: 1;
+  max-width: 400;
+}
+
+/*****Performance Indicators Page*****/
+.performanceIndicatorsPage .subTasksInd,
+.subTasksCircle,
+.outPutDashboard,
+.priorityDashboard {
+  border-radius: 4px;
+  border: solid 1px #e7e9f1 !important;
+  background-color: #ffffff !important;
+}
+
+.printTables table {
+  direction: rtl !important;
+}
+
+.outputHeader h5 {
+  font-family: TheSans;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 0.81;
+  text-align: right;
+  color: #4d4f5c;
+}
+
+.outputHeader p {
+  font-family: TheSans;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 1.18;
+  text-align: left;
+  color: rgba(72, 72, 72, 0.5);
+}
+
+.outputHeader .outPutColor,
+.outPutdoneColor {
+  border-radius: 50%;
+  padding: 0px 10px;
+  width: 40px;
+  height: 40px;
+  margin-left: 8px !important;
+  margin-right: 8px;
+}
+
+.subTasksInd .title {
+  padding: 10px;
+  text-align: right;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.11);
+  background-color: #ffffff;
+  font-family: TheSans;
+  font-size: 16px;
+  font-weight: bold;
+  color: #4d4f5c !important;
+}
+
+/* .dashBoardTable thead,
+.dashBoardTable tbody {
+  display: block;
+}  */
+
+.dashBoardTable {
+  overflow: auto;
+  display: block;
+  max-height: 25vh;
+}
+
+.dashBoardTable ::-webkit-scrollbar {
+  width: 3px;
+}
+
+.dashBoardTable ::-webkit-scrollbar-thumb {
+  background-color: transparent !important;
+  /* color of the scroll thumb */
+  border-radius: 5px;
+  /* roundness of the scroll thumb */
+  border: 1px solid #abafbe;
+  /* creates padding around scroll thumb */
+}
+
+.dashBoardTable th,
+.dashBoardTable td {
+  text-align: right;
+  border-bottom: none !important;
+  border-top: none !important;
+  padding-bottom: 1px !important;
+  width: 150px;
+}
+
+.dashBoardTable tbody {
+  font-family: TheSans;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.36;
+  color: #176d73;
+}
+
+.dropdown-toggle {
+  line-height: 0 !important;
+}
+
+.dropdown-toggle span {
+  padding: 3px;
+  border-radius: 4px;
+  border: solid 1px #e7e9f1;
+  background-color: #025358;
+  font-family: doridArabicKufi;
+  font-size: 14px;
+  color: #e7e9f1;
+}
+
+.dashBoardTable thead tr {
+  background-color: transparent !important;
+  border-radius: 20px !important;
+  font-family: TheSans;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: right;
+  color: #717185;
+  border-bottom: 1px solid #d4d6de !important;
+}
+
+.subTasksInd .title span {
+  font-family: TheSans;
+  font-size: 20px;
+  font-weight: bold;
+  padding-right: 15px;
+  color: #025358 !important;
+}
+
+.subTasksCircle h4 {
+  font-family: doridArabicKufi;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.33;
+  color: #1b1c20;
+}
+
+.printBtn,
+.printBtn:hover,
+.printBtn:focus,
+.printBtn:active {
+  border-radius: 5px;
+  background-color: #025358 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.recharts-wrapper {
+  margin: 30px auto !important;
+}
+
+.pieNumber {
+  text-align: left;
+  opacity: 0.5;
+  font-family: TheSans;
+  font-size: 14px;
+  line-height: 1.31;
+  color: #025358;
+}
+
+.pieType {
+  font-family: TheSans;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: right;
+  color: #025358;
+}
+
+.pieInfoCircle {
+  border-radius: 50%;
+  padding: 0px 10px;
+  border: solid 4px;
+  background-color: #ffffff;
+  margin-left: 8px !important;
+}
+
+.recharts-layer .recharts-bar-rectangle {
+  width: 5px !important;
+  padding: 2px !important;
+}
+
+.recharts-text tspan {
+  opacity: 0.7;
+  font-family: sourcesans;
+  font-size: 11px;
+  font-weight: bold !important;
+  line-height: 1.18;
+  color: #4c5c99 !important;
+}
+
+.employeDrop {
+  text-align: right;
+  width: auto;
+  height: 200px;
+  overflow-x: scroll;
+}
+
+.employeDrop span {
+  color: #025358;
+  background-color: transparent;
+  font-family: doridArabicKufi;
+  font-size: 13px;
+  border-radius: 50%;
+  font-weight: bold;
+  padding: 4px 5px;
+  background-color: #e7e9f1;
+  margin-left: 5px;
+}
+
+.employeDrop h6 {
+  font-family: doridArabicKufi;
+  font-size: 14px;
+  font-weight: bold;
+  color: #20252e;
+}
+
+.addManiTaskForm h6 {
+  text-align: right;
+  font-family: doridArabicKufi;
+  font-size: 14px;
+  font-weight: bold;
+  color: #20252e;
+}
+
+.deadlineInput {
+  height: 40px;
+  width: 100% !important;
+}
+
+/***Task-Schedule***/
+.cardsList {
+  border: solid 1px #e7e9f1;
+  background-color: #ffffff;
+}
+
+.Carddate {
+  font-family: doridArabicKufi;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-align: right;
+  color: #364464;
+}
+
+.statusDiv,
+.statusDivMain {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 #e7e9f1;
+  border: solid 1px #e7e9f1;
+  background-color: #ffffff;
+}
+
+.statusDiv .statusTitle,
+.statusDivMain .statusTitle {
+  font-family: doridArabicKufi;
+  font-size: 18px;
+  font-weight: bold;
+  padding-right: 5px;
+  color: #5c6581;
+}
+
+#notStart {
+  background-color: #eedfe8;
+}
+
+#working {
+  background-color: #dfe2ee;
+}
+
+#finished {
+  background-color: #dfeee1;
+}
+
+.statusDiv .cardsNum {
+  font-size: 20px;
+  font-weight: bold;
+  color: #20252e;
+}
+
+.statusDivMain .cardsNum {
+  font-family: doridArabicKufi;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.33;
+  color: #0b2548;
+  padding: 0px 10px;
+  background-color: #d4d6de;
+  border-radius: 50%;
+}
+
+/*Details Modal*/
+.TaskDetailsModal .modal-title h4 {
+  margin: 10px 12px;
+}
+
+.TaskDetailsModal .closeModal {
+  color: #176d73;
+  margin-left: 15px;
+  font-size: 14px !important;
+  cursor: pointer;
+}
+
+.TaskDetailsModal .closeModal:hover {
+  color: #025358;
+  font-size: 17px !important;
+}
+
+.TaskDetailsModal h6,
+.AddCommentModal h6 {
+  font-family: doridArabicKufi;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.36;
+  letter-spacing: normal;
+  text-align: right;
+  color: #5c6581;
+}
+
+.TaskDetailsModal p,
+.TaskDetailsModal span,
+.AddCommentModal p {
+  word-break: break-all;
+  font-family: doridArabicKufi;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.36;
+  letter-spacing: normal;
+  text-align: right;
+  color: #0b2548;
+}
+
+/*Task Comments*/
+
+.commentCard {
+  border-radius: 2px;
+  box-shadow: 0 10px 15px 0 #e7e9f1;
+  border: solid 1px #e7e9f1;
+  background-color: #ffffff;
+  text-align: right;
+  padding: 10px;
+  margin: 10px 5px;
+}
+
+.commentCard h3 {
+  font-family: doridArabicKufi;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.31;
+  color: #025358;
+  word-break: break-all;
+}
+
+.commentCard span {
+  font-family: doridArabicKufi;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #176d73;
+}
+
+.commentCard h6 {
+  font-family: doridArabicKufi;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.4;
+  color: #364464;
+  word-break: break-all;
+}
+
+.commentCard h5,
+.AddCommentModal h5 {
+  font-family: doridArabicKufi;
+  /* font-size: 14px; */
+  font-weight: bold;
+  line-height: 1.36;
+  /* color: #5c6581; */
+}
+
+.AddCommentModal .modal-title h4 {
+  font-family: doridArabicKufi;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.33;
+  text-align: center;
+  color: #1b1c20;
+  padding: 10px 5px;
+  border-radius: 24px;
+  margin: 15px;
+  cursor: pointer;
+  background-color: #d8dae0;
+}
+
+.AddCommentModal {
+  text-align: right;
+}
+
+/* .addManiTaskForm .ant-upload {
+  width: 100% !important;
+  padding: 12px;
+
+} */
+
+/*SNACKBARS*/
+
+.ant-notification-notice {
+  padding: 20px 50px !important;
+  width: auto !important;
+  text-align: right;
+  background: #176d73 !important;
+  color: #fff;
+  font-family: doridArabicKufi;
+  font-size: 15px !important;
+  font-weight: bold !important;
+  z-index: 9999999999999 !important;
+}
+
+.modal-backdrop {
+  background-color: gray !important;
+  opacity: 0.1 !important;
+}
+
+.ant-badge .ant-scroll-number-only-unit {
+  color: #fff !important;
+}
+
+.printTitle {
+  padding-top: 80px !important;
+}
+
+.footer-space {
+  visibility: hidden;
+}
+
+.printFooter {
+  position: fixed;
+  bottom: 20px !important;
+  font-size: 30px;
+  z-index: 0 !important;
+  background-color: #025358 !important;
+  margin-top: 60px !important;
+}
+.copyIcon {
+  color: #00726f !important;
+}
+.printFooter h4 {
+  color: #fff !important;
+}
+
+.pinBtn,
+.pinBtn:hover,
+.pinBtn:focus,
+.pinBtn:active {
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.onlyPrint {
+  display: none !important;
+}
+
+@media print {
+  .onlyPrint {
+    display: flex !important;
+  }
+
+  .breakPage {
+    page-break-after: always;
+  }
+
+  .printTables {
+    direction: rtl;
+  }
+
+  .title {
+    text-align: right;
+  }
+
+  .printBtn,
+  .NoPrintNum {
+    display: none;
+  }
+
+  html,
+  body {
+    height: initial !important;
+    overflow: initial !important;
+  }
+
+  h4,
+  h5 {
+    font-family: TheSans !important;
+  }
+
+  .dashBoardTable {
+    height: auto !important;
+    width: 100% !important;
+    overflow: visible !important;
+    display: table !important;
+    margin-bottom: 50px !important;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0 !important;
+  }
+
+  .footer-space {
+    height: 20px !important;
+    font-weight: bold !important;
+    width: 100% !important;
+    padding: 15pt !important;
+    margin: 15pt 0 !important;
+  }
+
+  .footer-spacePie {
+    height: 100px !important;
+    font-weight: bold !important;
+    width: 100% !important;
+    padding: 10pt !important;
+    margin: 10pt 0 !important;
+  }
+}
+
+.ant-select-selection-item::after,
+.ant-select-selection-placeholder {
+  padding-top: 5px !important;
+}
+
+.deleteCon {
+  font-family: doridArabicKufi;
+  font-size: 20px;
+}
+toggle .sidemenu .navbar-toggler:focus,
+.sidemenu .navbar-toggler:active {
+  outline: none !important;
+  border-color: #176d73 !important;
+}
+
+.sidemenu-active {
+  color: #025358 !important;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 17px;
+  transition: 0.5s ease;
+}
+
+.squares {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 2px;
+  overflow-x: scroll;
+}
+
+.squares .square {
+  flex: none;
+  width: 100%;
+  /* max-width: 100%; */
+  /* padding-left: 15px; */
+  /* padding-right: 15px; */
+  margin: 4px;
+}
+
+@media (min-width: 1200px) {
+  .squares {
+    overflow-x: visible;
+  }
+
+  .squares .square {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+}
+
+.ArchivePage ::-webkit-scrollbar {
+  color: #025358 !important;
+}
+
+.sqMenu {
+  height: 55vh;
+  overflow-y: scroll;
+}
+
+.sqMenu::-webkit-scrollbar-thumb {
+  height: 100px !important;
+}
+
+.treeTable {
+  overflow-y: scroll;
+  max-height: 50vh;
+}
+
+.treeTable ::-webkit-scrollbar {
+  width: 3px;
+}
+
+.treeTable ::-webkit-scrollbar-thumb {
+  background-color: #176d73;
+  /* color of the scroll thumb */
+  border-radius: 5px;
+  /* roundness of the scroll thumb */
+  border: 1px solid #176d73;
+  /* creates padding around scroll thumb */
+}
+
+.backToManagment,
+.backToManagment:hover,
+.backToManagment:focus {
+  color: #176d73;
+  font-size: 15px;
+  font-weight: bold;
+  border: 1px solid #176d73;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.MuiTreeItem-label a,
+.MuiTreeItem-label a:hover,
+.MuiTreeItem-label:focus {
+  color: #20252e;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container {
+  width: 100%;
+}
+
+.MuiTreeItem-label {
+  position: inherit !important;
+}
+
+.react-datepicker__input-container > input {
+  font-family: "Font Awesome 5 Free" !important;
+  font-weight: 900 !important;
+  font-size: 15px;
+  font-stretch: extra-condensed;
+}
+
+.EditBTNN {
+  float: right !important;
+}
+
+/* .mahamy-navbar .dropdown {
+  padding-bottom: 20px;
+} */
+.NoDataPage {
+  height: 80vh !important;
+  text-align: center;
+  /* overflow-x: scroll !important; */
+  overflow-x: hidden;
+  padding-bottom: 5% !important;
+}
+
+@media screen and (min-width: 768px) {
+  .floatSlick .slick-track {
+    float: right;
+  }
+
+  navbar-nav {
+    margin-right: auto !important;
+  }
+}
+
+/************************************************************************************s*/
+@media screen and (max-width: 768px) {
+  .NoDataH3 {
+    font-size: 17px !important;
+    left: 30% !important;
+    top: 15% !important;
+  }
+
+  .datefromMobile
+    .react-datepicker-popper[data-placement^="bottom"]
+    .react-datepicker__triangle {
+    margin-left: 20px !important;
+  }
+
+  .datefromMobile .react-datepicker-popper {
+    left: -60px !important;
+  }
+
+  .outputChart .recharts-surface,
+  .priorityChart .recharts-surface {
+    width: 220px !important;
+    height: 250px !important;
+  }
+
+  .outputChart .recharts-surface,
+  .priorityChart .recharts-surface {
+    margin: 0 0 0 300px !important;
+  }
+
+  .subTasksCircle h4 {
+    font-size: 18px;
+  }
+
+  .addTreeIcon .dropdown-menu {
+    z-index: 9999999 !important;
+  }
+
+  .slick-prev {
+    left: -15px;
+  }
+
+  .navlogo,
+  .visionHeader,
+  .mahamy-navbar h4 {
+    display: none;
+  }
+
+  .footer-spacePie {
+    height: 0px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .pieNumber {
+    text-align: center !important;
+  }
+
+  .priBtnDesk {
+    display: none;
+  }
+
+  .filterSearchMobile .ant-select-selector,
+  .filtMobile .ant-select-selector,
+  .searchFormSc input {
+    height: 40px !important;
+  }
+
+  .searchFormSc input {
+    margin-top: 8px !important;
+    margin-bottom: 5px;
+  }
+
+  .filtMobile,
+  .searchFormSc {
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+  }
+
+  .treeDetailsShow,
+  .noTaskdesktop {
+    display: none;
+  }
+
+  .MuiTreeItem-label .MuiLabelLink {
+    font-size: 15px;
+  }
+
+  .searchForm {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .sidemenu .navbar-nav {
+    padding-top: 30px;
+  }
+
+  /* .mahamy-navbar .nav-username {
+    margin: auto 10px 25px !important;
+    height: 19px;
+    font-family: doridArabicKufi;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.36;
+    color: #20252e;
+  } */
+
+  .taskSearchInput input::placeholder,
+  .searchForm input::placeholder,
+  .commentCard h3,
+  .statusDiv .statusTitle,
+  .statusDivMain .statusTitle,
+  .pieNumber,
+  .TaskCard .maintaskname h6,
+  .pieType,
+  .employeDrop span {
+    font-size: 13px;
+  }
+
+  .modal-title h5 {
+    font-size: 17px;
+  }
+
+  .TaskCard .subtaskname,
+  .TaskCard .dateTitle i {
+    font-size: 12px;
+  }
+
+  .TaskCard .dateTitle {
+    font-size: 10px;
+  }
+
+  .TaskCard .taskpriority span {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .mahamy-navbar .dropdown {
+    padding-bottom: 10px;
+  }
+
+  .mahamy-navbar .dropdown-item {
+    color: #025358;
+  }
+
+  .TaskDetailsModal .commentsBtn,
+  .TaskCard .detailsBtn,
+  .TaskCard .detailsBtn:active,
+  .TaskCard .detailsBtn:hover,
+  .TaskCard .detailsBtn:active,
+  .TaskDetailsModal .detailsBtn,
+  .TaskDetailsModal .detailsBtn:active,
+  .TaskDetailsModal .detailsBtn:hover,
+  .TaskDetailsModal .detailsBtn:active,
+  .TaskCard .commentsBtn,
+  .TaskCard .commentsBtn:active,
+  .TaskCard .commentsBtn:hover,
+  .TaskCard .commentsBtn:active,
+  .TaskDetailsModal .commentsBtn,
+  .TaskDetailsModal .commentsBtn:active,
+  .TaskDetailsModal .commentsBtn:hover,
+  .TaskDetailsModal .commentsBtn:active {
+    padding: 7px 13px;
+    font-size: 13px;
+  }
+
+  .slick-prev:before,
+  .slick-next:before,
+  .slick-next:before {
+    font-size: 20px;
+  }
+
+  .outputHeader p,
+  .commentCard span,
+  .recharts-text tspan {
+    font-size: 11px;
+  }
+
+  .Carddate {
+    font-size: 10px;
+  }
+
+  .statusDiv .cardsNum {
+    font-size: 15px;
+  }
+
+  .tableTitle {
+    font-family: doridArabicKufi;
+    font-size: 20px;
+    padding-top: 15px;
+    font-weight: bold;
+  }
+
+  .TaskDetailsModal .closeModal,
+  .statusDivMain .cardsNum,
+  .dashBoardTable tbody,
+  .dashBoardTable thead tr,
+  .commentCard h6 {
+    font-size: 12px;
+  }
+
+  .searchFormSc .searchIconBtn {
+    top: 10px;
+  }
+
+  .TaskDetailsModal h6,
+  .AddCommentModal h6,
+  .subTasksInd .title h4,
+  .navbar-nav .nav-link {
+    font-size: 14px;
+  }
+
+  .TaskDetailsModal p,
+  .TaskDetailsModal span,
+  .AddCommentModal p {
+    font-size: 12px;
+  }
+
+  .TreeBorder {
+    border-left: none !important;
+  }
+
+  .addMainTaskBtn,
+  .addSubTaskBtn,
+  .addMainTaskBtn:hover,
+  .addSubTaskBtn:hover,
+  .addMainTaskBtn:focus,
+  .addSubTaskBtn:focus,
+  .addMainTaskBtn:active,
+  .addSubTaskBtn:active {
+    margin: 5px 10px 2px;
+    padding: 5px 10px;
+  }
+
+  .deleteCon {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .TaskSchedulePage {
+    border: none;
+  }
+
+  .manageDetailsMobile .taskSearchInput {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+}
+
+.ant-btn {
+  height: auto !important;
+}
+
+.TreeBorder {
+  border-left: 1px solid #e7e9f1;
+}
+
+#validate_other_dueDate {
+  height: 45px !important;
+}
+
+.CommentOperations,
+.CommentOperations:hover,
+.CommentOperations:focus,
+.CommentOperations:active {
+  float: left;
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  color: #025358 !important;
+  background-color: transparent !important;
+}
+
+.commDel .modal-content {
+  background-color: #f0f3f4;
+}
+
+.signinComponent {
+  height: 80vh;
+}
+
+.ant-input-affix-wrapper {
+  background-color: inherit !important;
+}
+
+.loginBtn,
+.loginBtn:focus,
+.loginBtn:active,
+.loginBtn:hover {
+  color: #fff !important;
+  background-color: #176d73 !important;
+  border: none !important;
+  outline: none !important;
+  border-radius: 5px !important;
+  height: 40px !important;
+}
+
+.loginBtn a {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.cardStatusName {
+  font-family: doridArabicKufi;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.9;
+}
+
+.cardStatusNumber {
+  font-size: 12px;
+  font-weight: bold;
+  font-family: doridArabicKufi;
+  line-height: 1.83;
+  color: #011354;
+}
+
+#editCommentsModal {
+  min-height: 100px;
+  direction: ltr;
+  height: auto;
+  max-height: 350px;
+  overflow-y: scroll;
+  overflow-x: hidden !important;
+}
+
+#commentsModal {
+  min-height: 100px;
+  direction: ltr;
+  height: auto;
+  max-height: 700px;
+  overflow-y: scroll;
+  overflow-x: hidden !important;
+}
+
+.custom-file-input {
+  width: 90%;
+  height: 80px;
+  position: absolute;
+  bottom: 5px;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.custom-file-input::before {
+  content: "";
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+
+/***************PreLoading*********************/
+.spinner-bk {
+  background: #fff;
+  position: fixed;
+  z-index: 444;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.sk-cube-grid {
+  width: 40px;
+  height: 40px;
+  margin: 200px auto;
+}
+
+.dateLoading .sk-cube-grid {
+  margin: 25px auto !important;
+  width: 40px;
+  height: 40px;
+}
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: #176d73;
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+  animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+}
+
+.sk-cube-grid .sk-cube1 {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+.sk-cube-grid .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+
+.sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.sk-cube-grid .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+.sk-cube-grid .sk-cube7 {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.sk-cube-grid .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+
+.sk-cube-grid .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%,
+  70%,
+  100% {
+    -webkit-transform: scale3D(1, 1, 1);
+    transform: scale3D(1, 1, 1);
+  }
+
+  35% {
+    -webkit-transform: scale3D(0, 0, 1);
+    transform: scale3D(0, 0, 1);
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%,
+  70%,
+  100% {
+    -webkit-transform: scale3D(1, 1, 1);
+    transform: scale3D(1, 1, 1);
+  }
+
+  35% {
+    -webkit-transform: scale3D(0, 0, 1);
+    transform: scale3D(0, 0, 1);
+  }
+}
+
+.ant-select-dropdown {
+  text-align: right !important;
+}
+
+/* .archiveComments .modal-content {
+  top: 0;
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+} */
+.noDataSchedule {
+  font-weight: bold;
+  font-family: doridArabicKufi;
+  font-size: 20px;
+  margin-top: -100px;
+}
+
+.qaProceeBtn {
+  text-align: right;
+  margin: 15px 0;
+}
+
+.qaProceeBtn span {
+  padding: 5px;
+  border-radius: 5px;
+  font-family: doridArabicKufi;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.33;
+}
+
+.TaskCard .objectionBtn,
+.TaskCard .objectionBtn:hover,
+.TaskCard .objectionBtn:active {
+  border-radius: 4px !important;
+  padding: 5px 19px !important;
+  border: solid 1px #be8e8e !important;
+  background-color: #ffffff !important;
+  font-family: doridArabicKufi;
+  font-size: 14px;
+  box-shadow: none !important;
+  font-weight: bold;
+  text-align: center;
+  color: #800202 !important;
+}
+
+.mahamy-navbar h4 {
+  font-family: doridArabicKufi;
+  font-size: 30px;
+  position: absolute;
+  left: 45%;
+  font-weight: bold;
+}
+
+.mahamy-navbar h6 {
+  font-family: doridArabicKufi;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.HomePage {
+  background-image: url("./assets/images/homeBg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  height: 90vh !important;
+  text-align: center;
+  /* overflow-x: scroll !important; */
+  padding-bottom: 5% !important;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+.ant-dropdown-menu.ant-dropdown-menu-rtl {
+  padding: 20px !important;
+  border-radius: 10px !important;
+}
+
+.ant-dropdown-menu-item:hover {
+  background-color: transparent !important;
+  color: #00726f !important;
+}
+
+.navitem,
+.navitem a {
+  color: #00726f !important;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: doridArabicKufi;
+  background-color: transparent;
+}
+
+.userBtn i {
+  color: #00726f;
+}
+
+.userBtn,
+.userBtn:hover,
+.userBtn:focus {
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-brand {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.navbar {
+  padding: 0 1rem !important;
+}
+
+.navbar-brand {
+  margin: auto !important;
+}
+
+.ant-pagination {
+  text-align: center;
+  margin: 10px auto;
+}
+.treeSelectt .ant-select-selector {
+  overflow: scroll !important;
+}
+
+.selectedCategories {
+  text-align: right;
+  padding-top: 10px;
+}
+.selectedCategories span {
+  font-family: doridArabicKufi;
+  font-size: 14px;
+  text-align: right;
+  font-weight: bold;
+  color: #838383;
+}
+.selectedCategories p {
+  font-family: doridArabicKufi;
+  font-size: 14px;
+  direction: rtl;
+  text-align: right;
+  color: #011354;
+}
+
+.ant-card-body {
+  padding: 15px !important;
+  /* height: 435px !important; */
+}
+.CardBtns {
+  /* position: absolute !important; */
+  /* bottom: 20px; */
+  width: 90% !important;
+}
